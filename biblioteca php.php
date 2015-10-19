@@ -1,6 +1,5 @@
 <?php
-// Devuelve true o false dependiendo si es 
-// primo o no
+// Devuelve true si es primo o false si no lo es
 function esPrimo($numero) {
  
     $primo = true;
