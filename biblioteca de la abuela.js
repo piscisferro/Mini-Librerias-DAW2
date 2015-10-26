@@ -1,8 +1,14 @@
 // Funcion Random entre un minimo y un maximo
-function randomRange (min, max) {
+function randomRange(min, max) {
     
     var resultado = (Math.random() * (max - min)) + min;
     
+	/* Si queremos numeros enteros
+	
+	var resultado = Math.round((Math.random() * (max - min)) + min);
+	
+	*/
+	
     return resultado;
     
 }
@@ -11,7 +17,7 @@ function randomRange (min, max) {
 // Funcion que borra el elemento objeto que se pasa como parametro
 function borrar(elemento) {
     
-    elemento.parentNode.removechild(elemento);
+    elemento.parentNode.removeChild(elemento);
     
 }
 
@@ -19,8 +25,10 @@ function borrar(elemento) {
 // Funcion para mover un elemento a la izquierda o derecha
 // Si ponemos distancia negativa nos moveremos hacia la izquierda
 // Si ponemos distancia positiva nos moveremos hacia la derecha
-function moverHorizontal (elemento, distancia) {
+function moverHorizontal(elementoId, distancia) {
  
+    var elemento = document.getElementById(elementoId);
+    
     elemento.style.left = (elemento.offsetLeft + distancia) + "px";
     
 }
@@ -29,8 +37,10 @@ function moverHorizontal (elemento, distancia) {
 // Funcion para mover un elemento hacia arriba o hacia abajo
 // Si ponemos distancia negativa nos moveremos hacia arriba
 // Si ponemos distancia positiva nos moveremos hacia abajo
-function moverVertical (elemento, distancia) {
+function moverVertical(elementoId, distancia) {
  
+    var elemento = document.getElementById(elementoId);
+    
     elemento.style.top = (elemento.offsetTop + distancia) + "px";
     
 }
