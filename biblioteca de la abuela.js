@@ -21,6 +21,19 @@ function borrar(elemento) {
     
 }
 
+// Funcion para borrar todos los elementos de un contenedor
+function borrarTodo (contenedorId) {
+
+	// Buscamos el contenedor donde se encuentra todo lo que queremos borrar
+	var contenedor = document.getElementById(contenedorId);
+                
+	// Mientras el contenedor tenga nodos hijos, los borrara.
+	while (contenedor.firstChild) {
+		contenedor.removeChild(contenedor.firstChild);
+    }
+
+}
+
 
 // Funcion para mover un elemento a la izquierda o derecha
 // Si ponemos distancia negativa nos moveremos hacia la izquierda
