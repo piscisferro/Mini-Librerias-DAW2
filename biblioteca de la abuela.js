@@ -5,7 +5,7 @@ function randomRange(min, max) {
     
 	/* Si queremos numeros enteros
 	
-	var resultado = Math.round((Math.random() * (max - min)) + min);
+	var resultado = Math.floor((Math.random() * (max - min + 1)) + min);
 	
 	*/
 	
