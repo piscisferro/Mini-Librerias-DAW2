@@ -3,14 +3,32 @@ function randomRange(min, max) {
     
     var resultado = (Math.random() * (max - min)) + min;
     
-	/* Si queremos numeros enteros
-	
+	/* Si queremos numeros enteros con esta formula conseguimos que todos los numeros tengan la misma probabilidad de salir
 	var resultado = Math.floor((Math.random() * (max - min + 1)) + min);
 	
 	*/
 	
     return resultado;
     
+}
+
+
+// Funcion contains manual. Dado que no he encontrado niongun metodo para arrays similar 
+// Parametros: array (array que se quiere comprobar).
+//					   obj (objeto que se quiere comprobar si esta en el array)
+// return: True or false.
+function contains(array, obj) {
+	// Bucle for para recorrer el array
+    for (var i = 0; i < array.length; i++) {
+		// Si se encuentra el objeto
+        if (array[i] == obj) {
+			// Retorna true
+            return true;
+        }
+    }
+	
+	// Si no encuentra el objeto retorna false.
+    return false;
 }
 
 
@@ -57,3 +75,4 @@ function moverVertical(elementoId, distancia) {
     elemento.style.top = (elemento.offsetTop + distancia) + "px";
     
 }
+
